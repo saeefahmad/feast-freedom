@@ -1,8 +1,7 @@
 const mongoose = require("mongoose");
 const menuItemSchema = mongoose.Schema({
-	menuItemId:String,
 	itemName:String,
-	ingredients:Boolean,
+	ingredients:String,
 	price:Number,
 	kitchenId:String
 });

@@ -15,6 +15,8 @@ import { MatButtonModule } from '@angular/material';
 import { FormsModule,  ReactiveFormsModule } from '@angular/forms';
 import {MyserviceService} from './myservice.service';
 import { HttpClientModule } from '@angular/common/http';
+import { KitchenRegistrationComponent } from './kitchen-registration/kitchen-registration.component';
+import { KitchenMenuComponent } from './kitchen-menu/kitchen-menu.component';
 
 
 @NgModule({
@@ -23,7 +25,10 @@ import { HttpClientModule } from '@angular/common/http';
     LoginComponent,
     RegisterComponent,
     UserDashboardComponent,
-    MainDeskComponent
+    MainDeskComponent,
+    KitchenRegistrationComponent,
+    KitchenMenuComponent,
+    KitchenMenuComponent
   ],
   imports: [
     BrowserModule,

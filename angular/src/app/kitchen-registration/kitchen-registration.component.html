@@ -1,0 +1,63 @@
+<div class="formcontainer">
+  <div class="formbody">
+    <form style="width:100%;" [formGroup]="myForm">
+      <div class="header">Add New Kichen</div>
+      <div>
+        <mat-form-field style="width:100%;">
+          <input type="text" formControlName="username" matInput placeholder="Username" id="user">
+        </mat-form-field>
+        <span *ngIf="isValid('username')">Username is required</span>
+      </div>
+      <div>
+        <mat-form-field style="width:100%;">
+          <input type="text" formControlName="kitchenid" matInput placeholder="Kitchen Id (enter a unique name)" id="kitchenid">
+        </mat-form-field>
+        <span *ngIf="isValid('kitchenid')">Kithen id is required</span>
+      </div>
+      <div>
+      <div>
+        <mat-form-field style="width:100%;">
+          <input type="text" formControlName="name" matInput placeholder="Kitchen Name" id="name">
+        </mat-form-field>
+        <span *ngIf="isValid('name')">Kithen name is required</span>
+      </div>
+      <div>
+        Working days: <br>
+        <mat-form-field style="width:100%;">
+          <input type="checkbox" value=1 formControlName="workingday1">Monday
+          <input type="checkbox" value=2 formControlName="workingday2">Tuesday<br>
+          <input type="checkbox" value=3 formControlName="workingday3">Wednesday
+          <input type="checkbox" value=4 formControlName="workingday4">Thursday<br>
+          <input type="checkbox" value=5 formControlName="workingday5">Friday
+          <input type="checkbox" value=6 formControlName="workingday6">Saturday<br>
+          <input type="checkbox" value=7 formControlName="workingday7">Sunday
+        </mat-form-field>
+      </div>
+      <div>
+        <mat-form-field style="width:100%;">
+          Starting time:
+          <select formControlName="starttime">
+            <option *ngFor="let timing of timings" value="{{timing}}">{{timing}}</option>
+          </select>
+        </mat-form-field>
+      </div>
+      <div>
+        <mat-form-field style="width:100%;">
+          Closing time:
+          <select formControlName="endtime">
+            <option *ngFor="let timing of timings" value="{{timing}}">{{timing}}</option>
+          </select>
+        </mat-form-field>
+      </div>
+      <div style="margin-top:20px;">
+        <button class="form-btn" >Register Kitchen</button>
+      </div>
+      </div>
+    </form>
+  </div>
+  <div>
+    <div style="width: 290px; padding: 20px;">
+      <button class="form-btn-hollow" >Add Menu Item</button>
+    </div>
+  </div>
+</div>

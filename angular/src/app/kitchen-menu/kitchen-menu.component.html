@@ -1,0 +1,39 @@
+<div class="formcontainer">
+  <div class="formbody">
+    <form style="width:100%;" [formGroup]="myForm">
+      <div class="header">Add New Item in Menu</div>
+      <div>
+        <mat-form-field style="width:100%;">
+          <input type="text" formControlName="itemname" matInput placeholder="Item name" id="itemname">
+        </mat-form-field>
+        <span *ngIf="isValid('username')">Name is required</span>
+      </div>
+      <div>
+        <mat-form-field style="width:100%;">
+          <textarea rows="4" formControlName="ingredients" matInput placeholder="Ingredients" id="ingredients"></textarea>
+        </mat-form-field>
+        <span *ngIf="isValid('name')">Kithen name is required</span>
+      </div>
+      <div>
+        <mat-form-field style="width:100%;">
+          <input type="text" formControlName="price" matInput placeholder="Price" id="price">
+        </mat-form-field>
+        <span *ngIf="isValid('name')">Price name is required</span>
+      </div>
+      <div>
+        <mat-form-field style="width:100%;">
+          <input type="text" formControlName="kid" matInput placeholder="Kitchen Id (must be unique)" id="kid">
+        </mat-form-field>
+        <span *ngIf="isValid('kid')">Kitchen Id is required</span>
+      </div>
+      <div style="margin-top:20px;">
+        <button class="form-btn" >Add Item</button>
+      </div>
+    </form>
+  </div>
+  <div>
+    <div style="width: 290px; padding: 20px;">
+      <button class="form-btn-hollow" >Cancel</button>
+    </div>
+  </div>
+</div>
